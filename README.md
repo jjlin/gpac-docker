@@ -1,4 +1,4 @@
-Multi-arch builds of [GPAC](https://github.com/gpac/gpac), over an Ubuntu 22.04 (jammy) base image.
+Multi-arch builds of [GPAC](https://github.com/gpac/gpac), over an Ubuntu 24.04 (noble) base image.
 
 ## Example
 

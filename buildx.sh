@@ -66,6 +66,6 @@ for label in "${LABELS[@]}"; do
 done
 
 docker buildx rm builder || true
-docker buildx create --name builder --driver docker-container --use
+docker buildx create --name builder --driver docker-container --use --config buildkitd.toml
 docker buildx inspect --bootstrap
 docker buildx build "${OPTS[@]}" .

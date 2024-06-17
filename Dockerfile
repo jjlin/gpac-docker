@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 AS build
+FROM ubuntu:24.04 AS build
 
 SHELL ["/bin/bash", "-c"]
 
@@ -16,7 +16,7 @@ RUN ./configure --prefix=/usr/local/gpac \
  && make \
  && make install
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 SHELL ["/bin/bash", "-c"]
 

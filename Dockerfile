@@ -7,12 +7,12 @@ RUN . deps-build.conf \
  && apt-get update \
  && apt-get install -y "${deps[@]}"
 
+WORKDIR /usr/src
 ARG GIT_REF="master"
 RUN git clone --depth 1 --branch "${GIT_REF}" https://github.com/gpac/gpac.git
 
-WORKDIR gpac
-
-RUN ./configure --prefix=/usr/local/gpac \
+RUN cd gpac \
+ && ./configure --prefix=/usr/local/gpac \
  && make \
  && make install
 

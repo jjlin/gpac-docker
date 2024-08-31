@@ -69,3 +69,6 @@ docker buildx rm builder || true
 docker buildx create --name builder --driver docker-container --use --config buildkitd.toml
 docker buildx inspect --bootstrap
 docker buildx build "${OPTS[@]}" .
+
+# Clean up builder.
+docker buildx rm builder
